@@ -16,9 +16,8 @@ namespace AOC5
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    while (Reduce(ref line) > 0);
-
                     //Part one
+                    while (Reduce(ref line) > 0);
                     Console.WriteLine("Answer 1: " + line.Length);
 
                     //Part two
