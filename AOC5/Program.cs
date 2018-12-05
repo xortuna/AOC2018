@@ -16,9 +16,8 @@ namespace AOC5
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    while (Reduce(ref line) > 0)
-                    {
-                    }
+                    while (Reduce(ref line) > 0);
+
                     //Part one
                     Console.WriteLine("Answer 1: " + line.Length);
 
@@ -29,9 +28,7 @@ namespace AOC5
                     {
                         var lineCopy = line;
                         Remove(ref lineCopy, c);
-                        while (Reduce(ref lineCopy) > 0)
-                        {
-                        }
+                        while (Reduce(ref lineCopy) > 0);
                         if(bestLength > lineCopy.Length )
                         {
                             bestChar = c;
