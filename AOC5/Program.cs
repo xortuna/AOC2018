@@ -19,6 +19,13 @@ namespace AOC5
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
+                    while (Reduce(ref line) > 0)
+                    {
+                    }
+                    //Part one
+                    Console.WriteLine("Answer 1: " + line.Length);
+
+                    //Part two
                     int bestLength = int.MaxValue;
                     char bestChar = '0';
                     for(char c = 'A'; c <= 'Z'; ++c)
@@ -34,7 +41,6 @@ namespace AOC5
                             bestLength = lineCopy.Length;
                         }
                     }
-                    Console.WriteLine(line);
                     Console.WriteLine("Answer 2: " + bestChar + ": " + bestLength);
                 }
                 Console.ReadLine();
