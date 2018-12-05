@@ -9,11 +9,8 @@ namespace AOC5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             Console.WriteLine("Enter file:");
             string inputFile = Console.ReadLine();
-            Regex parser = new Regex(@"\[(\d\d\d\d-\d\d-\d\d\s\d\d:\d\d)\]\s(.+)");
-            Regex guardParser = new Regex(@".+#(\d+)");
             using (StreamReader sr = new StreamReader(inputFile))
             {
                 string line;
@@ -44,7 +41,6 @@ namespace AOC5
                     Console.WriteLine("Answer 2: " + bestChar + ": " + bestLength);
                 }
                 Console.ReadLine();
-
             }
         }
         private static int Remove(ref string line, char c)
